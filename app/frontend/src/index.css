@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 10% 98%;
+    --foreground: 200 30% 15%;
+    --card: 150 8% 96%;
+    --card-foreground: 200 30% 15%;
+    --popover: 150 10% 98%;
+    --popover-foreground: 200 30% 15%;
+    --primary: 155 100% 21%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 80% 43%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 150 6% 92%;
+    --muted-foreground: 200 15% 45%;
+    --accent: 155 40% 92%;
+    --accent-foreground: 155 100% 21%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 8% 88%;
+    --input: 150 8% 88%;
+    --ring: 155 100% 21%;
+    --radius: 0.5rem;
+    --sidebar-background: 200 30% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 155 100% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 20% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 200 20% 20%;
+    --sidebar-ring: 155 100% 40%;
+  }
+
+  .dark {
+    --background: 200 30% 8%;
+    --foreground: 150 5% 95%;
+    --card: 200 25% 12%;
+    --card-foreground: 150 5% 95%;
+    --popover: 200 25% 12%;
+    --popover-foreground: 150 5% 95%;
+    --primary: 155 80% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 200 20% 18%;
+    --muted-foreground: 150 5% 65%;
+    --accent: 155 30% 18%;
+    --accent-foreground: 155 80% 70%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 20% 20%;
+    --input: 200 20% 20%;
+    --ring: 155 80% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold leading-snug;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+
+@layer utilities {
+  .container-wide {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+}
