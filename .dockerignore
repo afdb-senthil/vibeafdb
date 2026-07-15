@@ -1,0 +1,12 @@
+.git
+.atoms
+.wiki.md
+.mgx
+node_modules
+**/node_modules
+**/.git
+**/dist
+app/backend
+app/promo
+*.md
+!app/frontend/README.md
