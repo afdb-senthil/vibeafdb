@@ -3,8 +3,7 @@
 steps:
   # Build the Docker image with increased resources
   - name: 'gcr.io/cloud-builders/docker'
-    dir: 'app/frontend'
-    args: ['build', '-f', 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/afdb-website:$COMMIT_SHA', '.']
+    args: ['build', '-f', 'app/frontend/Dockerfile', '-t', 'gcr.io/$PROJECT_ID/afdb-website:$COMMIT_SHA', 'app/frontend']
     timeout: '600s'
     env:
       - 'DOCKER_BUILDKIT=1'
