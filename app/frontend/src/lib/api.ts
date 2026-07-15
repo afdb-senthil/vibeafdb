@@ -1,4 +1,9 @@
-import { createClient } from '@metagptx/web-sdk';
-
-// Create client instance
-export const client = createClient();
+// API client placeholder
+// Replace with your own API client when backend is configured
+export const client = {
+  auth: {
+    login: () => {
+      window.location.href = '/';
+    },
+  },
+};

@@ -10,7 +10,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 COPY package.json pnpm-lock.yaml ./
 
 # Install pnpm with a specific version and install dependencies
-RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
+RUN corepack enable && corepack prepare pnpm@10.33.2 --activate
 RUN pnpm install --no-frozen-lockfile
 
 # Copy source code
