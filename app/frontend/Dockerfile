@@ -3,12 +3,15 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Set memory limit for Node.js build process
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
 
-# Install pnpm and dependencies
-RUN corepack enable && corepack prepare pnpm@latest --activate
-RUN pnpm install --frozen-lockfile
+# Install pnpm with a specific version and install dependencies
+RUN corepack enable && corepack prepare pnpm@9.15.4 --activate
+RUN pnpm install --no-frozen-lockfile
 
 # Copy source code
 COPY . .
